@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navabr/Navbar";
+import AiBot from "@/Components/ai/AiBoat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         
       <Navbar/>
         {children}
+      <AiBot/>
         </body>
     </html>
   );

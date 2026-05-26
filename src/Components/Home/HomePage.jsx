@@ -346,7 +346,7 @@ export default function HomePage() {
 
           <div className="mt-12 border-t border-border pt-6 text-sm text-muted-foreground flex flex-col md:flex-row justify-between gap-4">
             <p>© 2026 Vincular. All rights reserved.</p>
-            <p>Designed with Next.js & Tailwind CSS</p>
+            <p>Designed By Bhaskar Joshi.</p>
           </div>
         </div>
       </footer>
