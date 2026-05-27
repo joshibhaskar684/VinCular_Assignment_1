@@ -149,6 +149,7 @@ The assistant is designed to behave like a **professional compliance support age
 <img width="832" height="801" alt="image" src="https://github.com/user-attachments/assets/0538d4a6-bdb2-4621-8fc6-c8fcf33d4ca3" />
 
 <img width="837" height="796" alt="image" src="https://github.com/user-attachments/assets/606de252-cfee-4e34-8c37-6165c4cbabf9" />
+<img width="358" height="786" alt="image" src="https://github.com/user-attachments/assets/9ef46b33-22d2-43f4-8164-d5b8f92a88f9" />
 
 ---
 
