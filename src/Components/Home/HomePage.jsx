@@ -1,7 +1,4 @@
-// app/page.tsx
-// Next.js App Router + TailwindCSS
-// Fully responsive homepage for Vincular-style compliance company
-// Uses bg-background, text-foreground and blue/purple design system
+
 "use client"
 import {
   ShieldCheck,
@@ -52,14 +49,14 @@ const features = [
 
 export default function HomePage() {
   return (
+
     <main className="bg-background text-foreground overflow-hidden">
-      {/* HERO SECTION */}
+     
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-500/10 to-transparent blur-3xl" />
 
         <div className="container mx-auto px-6 py-20 lg:py-28 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* LEFT CONTENT */}
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-600 dark:text-blue-400 mb-6">
                 <BadgeCheck className="h-4 w-4" />
@@ -92,7 +89,6 @@ export default function HomePage() {
                 </button>
               </div>
 
-              {/* MINI FEATURES */}
               <div className="mt-10 grid grid-cols-2 gap-4">
                 {features.slice(0, 4).map((item) => (
                   <div key={item} className="flex items-center gap-2">
@@ -104,8 +100,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-
-            {/* RIGHT CARD */}
             <div className="relative">
               <div className="rounded-3xl border border-border bg-card/70 backdrop-blur-xl p-8 shadow-2xl">
                 <div className="grid gap-6">
@@ -146,7 +140,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto">
@@ -185,7 +178,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -264,7 +256,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="rounded-3xl overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 p-10 md:p-14 text-white relative">
@@ -290,7 +281,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="border-t border-border">
         <div className="container mx-auto px-6 py-12">
           <div className="grid md:grid-cols-4 gap-10">

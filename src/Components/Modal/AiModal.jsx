@@ -1,5 +1,7 @@
 "use client";
 
+import ReactMarkdown from "react-markdown";
+
 import Modal from "@mui/material/Modal";
 import axios from "axios";
 import { useState } from "react";
@@ -76,7 +78,6 @@ export default function AiModal({
       <div className="flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-3xl h-[90vh] rounded-3xl overflow-hidden border border-white/10 bg-[#0B1020] text-white shadow-2xl flex flex-col">
 
-          {/* HEADER */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-gradient-to-r from-blue-600 to-purple-600">
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-2xl bg-white/20 flex items-center justify-center">
@@ -100,31 +101,57 @@ export default function AiModal({
             />
           </div>
 
-          {/* CHAT AREA */}
           <div className="flex-1 overflow-y-auto px-5 py-6 space-y-5 bg-[#0F172A]">
 
-            {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`flex ${
-                  msg.role === "user"
-                    ? "justify-end"
-                    : "justify-start"
-                }`}
-              >
-                <div
-                  className={`max-w-[85%] rounded-2xl px-5 py-4 text-sm leading-relaxed shadow-lg ${
-                    msg.role === "user"
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                      : "bg-white/10 border border-white/10 text-gray-200"
-                  }`}
-                >
-                  {msg.content}
-                </div>
-              </div>
-            ))}
+           
 
-            {/* LOADING */}
+{messages.map((msg, index) => (
+  <div
+    key={index}
+    className={`flex ${
+      msg.role === "user"
+        ? "justify-end"
+        : "justify-start"
+    }`}
+  >
+    <div
+      className={`max-w-[85%] rounded-2xl px-5 py-4 text-sm leading-relaxed shadow-lg ${
+        msg.role === "user"
+          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+          : "bg-white/10 border border-white/10 text-gray-200"
+      }`}
+    >
+      <ReactMarkdown
+        components={{
+          h1: ({node, ...props}) => (
+            <h1 className="text-2xl font-bold mb-3" {...props} />
+          ),
+          h2: ({node, ...props}) => (
+            <h2 className="text-xl font-semibold mb-2" {...props} />
+          ),
+          h3: ({node, ...props}) => (
+            <h3 className="text-lg font-semibold mb-2" {...props} />
+          ),
+          p: ({node, ...props}) => (
+            <p className="mb-2" {...props} />
+          ),
+          ul: ({node, ...props}) => (
+            <ul className="list-disc pl-5 mb-2" {...props} />
+          ),
+          ol: ({node, ...props}) => (
+            <ol className="list-decimal pl-5 mb-2" {...props} />
+          ),
+          strong: ({node, ...props}) => (
+            <strong className="font-bold text-white" {...props} />
+          ),
+        }}
+      >
+        {msg.content}
+      </ReactMarkdown>
+    </div>
+  </div>
+))}
+
             {loading && (
               <div className="flex justify-start">
                 <div className="bg-white/10 border border-white/10 px-5 py-4 rounded-2xl">
@@ -138,7 +165,6 @@ export default function AiModal({
             )}
           </div>
 
-          {/* INPUT */}
           <div className="border-t border-white/10 p-4 bg-[#0B1020]">
             <div className="flex items-center gap-3">
               <input

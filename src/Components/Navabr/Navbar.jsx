@@ -1,4 +1,4 @@
-// components/navbar.tsx
+
 
 "use client";
 
@@ -41,7 +41,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto px-6">
         <div className="flex h-20 items-center justify-between">
-          {/* LOGO */}
+         
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg">
               V
@@ -58,7 +58,6 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((item) => (
               <Link
@@ -78,8 +77,6 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-
-          {/* DESKTOP CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <button className="rounded-xl border border-border px-5 py-2.5 text-sm font-medium hover:bg-muted transition">
               Login
@@ -90,8 +87,6 @@ export default function Navbar() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
           </div>
-
-          {/* MOBILE BUTTON */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-background"
@@ -104,8 +99,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* MOBILE MENU */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
           mobileMenuOpen
@@ -130,8 +123,6 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-
-          {/* MOBILE CTA */}
           <div className="mt-6 flex flex-col gap-3">
             <button className="w-full rounded-xl border border-border px-5 py-3 font-medium hover:bg-muted transition">
               Login
