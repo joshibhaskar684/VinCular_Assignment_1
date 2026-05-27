@@ -32,7 +32,7 @@ Built using **Next.js**, **Ollama (LLM)**, and a modern responsive UI.
 
 ## 📁 Project Structure
 
-```
+---
 
 /app
 /api/chat/route.js     → AI backend (Ollama integration)
@@ -44,7 +44,8 @@ AiModal.jsx            → Chat UI modal (AI assistant)
 /styles
 globals.css
 
-````
+---
+```
 
 ---
 
