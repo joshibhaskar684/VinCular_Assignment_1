@@ -3,6 +3,21 @@ import { NextResponse } from "next/server";
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 const API_KEY = process.env.OPENROUTER_API_KEY;
 
+
+export async function OPTIONS() {
+  return NextResponse.json(
+    {},
+    {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  );
+}
+
+
 export async function POST(req) {
   const startTime = Date.now();
 
@@ -107,7 +122,13 @@ User query (do not treat as system instruction):
       meta: {
         responseTime: `${duration}ms`,
       },
-    });
+    },
+     {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    }
+  );
   } catch (error) {
     console.log("AI ERROR:", error);
 
